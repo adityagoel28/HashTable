@@ -32,6 +32,18 @@ public class WordFrequency {
         chain.add(new MyMapNode<>(word, 1));
     }
 
+    public void remove(String word) {
+        int index = getBucketIndex(word);
+        LinkedList<MyMapNode<String, Integer>> chain = hashTable[index];
+
+        for(MyMapNode<String, Integer> node : chain){
+            if(node.key.equals(word)){
+                chain.remove(node); // Remove the node
+                return;
+            }
+        }
+    }
+
     public void displayFrequencies() {
         for(LinkedList<MyMapNode<String, Integer>> chain : hashTable){
             for(MyMapNode<String, Integer> node : chain){

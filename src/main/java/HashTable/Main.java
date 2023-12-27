@@ -22,6 +22,9 @@ public class Main {
             frequency.add(word);
         }
 
+        // Remove the word 'avoidable'
+        frequency.remove("avoidable");
+
         frequency.displayFrequencies();
     }
 }
