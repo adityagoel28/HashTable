@@ -3,7 +3,7 @@ package HashTable;
 import java.util.LinkedList;
 
 public class WordFrequency {
-    private final int numBuckets = 10;
+    private final int numBuckets = 100;
     LinkedList<MyMapNode<String, Integer>>[] hashTable;
 
     public WordFrequency() {
